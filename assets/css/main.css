@@ -1,44 +1,102 @@
-:root{
-  --maincolor: #0D1B2A;
+:root {
+  --maincolor: #0d1b2a;
   --mainfont: "Roboto", sans-serif;
 }
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: var(--mainfont);
   height: 5000px;
 }
-.bg__main-color{
- background-color: var(--maincolor);
+.bg__main-color {
+  background-color: var(--maincolor);
 }
-a{
+a {
   text-decoration: none;
 }
-.text__rich-black{
+.text__rich-black {
   color: var(--maincolor);
 }
-.btn__rich-black{
+.btn__rich-black {
   background-color: var(--maincolor);
   color: #fff;
-
+  padding: 6px 12px;
 }
-.btn__rich-black:focus{
-  background-color: #1e354f;
+.btn__rich-black:focus {
+  background-color: #304e71;
   color: #fff;
-
 }
-.btn__rich-black:hover{
-  background-color: #1e354f;
+.btn__rich-black:hover {
+  background-color: #304e71;
   color: #fff;
-
 }
 
-
+/* navbar start */
 .navbar {
-  box-shadow: 0 2px 4px 0  rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
-.navbar .company-logo{
+.navbar .company-logo {
   width: fit-content;
   border-radius: 10px;
 }
+/* navbar end */
+/* hero start */
+.hero {
+  margin-top: 100px;
+}
+.hero .point {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--maincolor);
+}
+.hero .hero__content .custom__badge {
+  background-color: #dcd9d7;
+  color: #1b263b50;
+  border-radius: 10px;
+  width: fit-content;
+}
+.hero .hero__content .custom__badge p {
+  width: fit-content;
+}
+.hero .demo__btn {
+  border: 0.5px solid var(--maincolor);
+}
+.hero .demo__btn:focus {
+  background-color: #dcd9d7;
+}
+.hero .demo__btn:hover {
+  background-color: #dcd9d7;
+}
+
+.hero .stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 1px;
+  background-color: #dee2e6;
+}
+@media (max-width: 768px) {
+  .stat-item:not(:last-child)::after {
+    display: none;
+  }
+}
+.hero .hero__image {
+  border-radius: 15px;
+}
+.hero .hero__image img {
+  border-radius: 15px;
+}
+.hero .hero__image-content .custom__badge {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  position: absolute;
+  bottom: -5%;
+  left: -5%;
+  border-radius: 10px;
+  width: fit-content;
+}
+/* hero end */
