@@ -7,7 +7,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: var(--mainfont);
-  height: 5000px;
 }
 .bg__main-color {
   background-color: var(--maincolor);
@@ -31,7 +30,6 @@ a {
   background-color: #304e71;
   color: #fff;
 }
-
 /* navbar start */
 .navbar {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
@@ -97,6 +95,31 @@ a {
   bottom: -5%;
   left: -5%;
   border-radius: 10px;
-  width: fit-content;
+  width: 45%;
+  font-size: 14px;
+}
+@media (max-width: 1200px) {
+  .hero .hero__image-content .custom__badge {
+    font-size: 14px;
+    width: 55%;
+  }
+}
+@media (max-width: 992px) {
+  .hero .hero__image-content .custom__badge {
+   bottom: -10%;
+   left: 22.5%; 
+  }
+}
+@media (max-width: 586px) {
+  .hero .hero__image-content .custom__badge {
+   font-size: 10px;
+  }
 }
 /* hero end */
+/* footer strat */
+.footer{
+  background-color: var(--maincolor);
+}
+.footer p{
+  color: #FFFFFFD1;
+}
