@@ -1,0 +1,44 @@
+:root{
+  --maincolor: #0D1B2A;
+  --mainfont: "Roboto", sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--mainfont);
+  height: 5000px;
+}
+.bg__main-color{
+ background-color: var(--maincolor);
+}
+a{
+  text-decoration: none;
+}
+.text__rich-black{
+  color: var(--maincolor);
+}
+.btn__rich-black{
+  background-color: var(--maincolor);
+  color: #fff;
+
+}
+.btn__rich-black:focus{
+  background-color: #1e354f;
+  color: #fff;
+
+}
+.btn__rich-black:hover{
+  background-color: #1e354f;
+  color: #fff;
+
+}
+
+
+.navbar {
+  box-shadow: 0 2px 4px 0  rgba(0, 0, 0, 0.15);
+}
+.navbar .company-logo{
+  width: fit-content;
+  border-radius: 10px;
+}
