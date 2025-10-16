@@ -92,27 +92,32 @@ a {
 .hero .hero__image-content .custom__badge {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   position: absolute;
-  bottom: -5%;
-  left: -5%;
+  bottom: -10%;
+  left: -10%;
   border-radius: 10px;
   width: 45%;
   font-size: 14px;
 }
 @media (max-width: 1200px) {
+  .hero .hero__image-content{
+    justify-content: center;
+  }
   .hero .hero__image-content .custom__badge {
     font-size: 14px;
-    width: 55%;
+    width: fit-content;
   }
 }
 @media (max-width: 992px) {
+
   .hero .hero__image-content .custom__badge {
-   bottom: -10%;
-   left: 22.5%; 
+    font-size: 12px;
+    left: 0;
   }
 }
 @media (max-width: 586px) {
-  .hero .hero__image-content .custom__badge {
-   font-size: 10px;
+  .hero .hero__image-content .custom__badge{
+    padding: 10px;
+    font-size: 10px;
   }
 }
 /* hero end */
