@@ -1,0 +1,70 @@
+/* header start */
+.header .back-btn{
+  transition: all ease 0.3s;
+}
+.header .back-btn:hover{
+  transform: scale(1.05);
+  color: #676666;
+}
+.header .back-btn svg path{
+  transition: all ease 0.3s;
+}
+.header .back-btn:hover svg path{
+  stroke: #676666;
+}
+.header .btn-team svg path{
+  transition: all ease 0.3s;
+}
+.header .btn-team:hover svg path{
+  fill: #fff;
+}
+.pipeline-columns .pipeline-column {
+  min-width: calc((100% - 48px) / 3); 
+  flex-shrink: 0;
+}
+.search .search-wrapper{
+  background-color: #EEEEEE;
+  width: 200px;
+}
+.search .search-wrapper .form-control::placeholder {
+  color: #0d1b2a80;
+}
+.search .search-wrapper .form-control:focus {
+  background-color: transparent;
+  border-color: none;
+  box-shadow: none;
+}
+.search .form-select{
+  width: 200px;
+  color: var(--maincolor);
+  background-color: #EEEEEE;
+}
+.search .form-select:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+.pipeline-cards .pipeline-column .status-dot{
+  width: 13px;
+  height: 13px;
+}
+.pipeline-cards .pipeline-column .status-submitted{
+  background-color: #2669E9;
+}
+.pipeline-cards .pipeline-column .status-Under-Review{
+  background-color: #E97B26;
+}
+.pipeline-cards .pipeline-column .status-Interview{
+  background-color: #9217BF;
+}
+.pipeline-cards .pipeline-column .status-Offer{
+  background-color: #06A646;
+}
+.pipeline-cards .pipeline-column .candidate-card .skill-tag{
+  background-color: #DCD9D7;
+}
+.pipeline-cards .pipeline-column .candidate-cards{
+  height: 500px;
+  background-color: #F6F6F6;
+  border-radius: 10px;
+  border: 1px dashed #8C8C8C;
+}

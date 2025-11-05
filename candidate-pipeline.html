@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+  <!-- base css file -->
+  <link rel="stylesheet" href="./assets/css/base.css">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./assets/css/candidate-pipeline.css" />
+
+</head>
+
+<body>
+
+  <section class="header py-4">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center fs-5">
+
+        <div class="d-flex gap-5 align-items-center">
+          <a href="#" class="back-btn text__rich-black fw-semibold">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="none" stroke="#0D1B2A" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M5.5 12.002H19m-8 6s-6-4.419-6-6s6-6 6-6" />
+            </svg>
+            Back
+          </a>
+          <div class="header_text-info text__rich-black">
+            <h1 class="fs-4 fw-medium">Candidate Pipeline</h1>
+            <p class="opacity-50">Senior Frontend Developer</p>
+          </div>
+        </div>
+        <div class="d-flex gap-2 align-items-center">
+
+          <button class="btn btn__rich-black__outline btn-team">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+              <path fill="#0D1B2A"
+                d="M6.002 4a1.998 1.998 0 1 1 3.996 0a1.998 1.998 0 0 1-3.996 0M8 3.002a.998.998 0 1 0 0 1.996a.998.998 0 0 0 0-1.996M11 4.5a1.5 1.5 0 1 1 3 0a1.5 1.5 0 0 1-3 0m1.5-.5a.5.5 0 1 0 0 1a.5.5 0 0 0 0-1m-9-1a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3M3 4.5a.5.5 0 1 1 1 0a.5.5 0 0 1-1 0M4.268 7A2 2 0 0 0 4 8H2v2.5a1.5 1.5 0 0 0 2.096 1.377c.074.331.19.647.34.942A2.5 2.5 0 0 1 1 10.5V8a1 1 0 0 1 1-1zm7.296 5.819A2.5 2.5 0 0 0 15 10.5V8a1 1 0 0 0-1-1h-2.268c.17.294.268.635.268 1h2v2.5a1.5 1.5 0 0 1-2.096 1.377q-.114.498-.34.942M6 6.999a1 1 0 0 0-1 1V11a3 3 0 0 0 6 0V8a1 1 0 0 0-1-1zm0 1h4V11a2 2 0 0 1-4 0z" />
+            </svg>
+            Team
+          </button>
+
+          <button class="btn btn__rich-black btn_candidate">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#fff"
+                d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1" />
+            </svg>
+            Add Candidate
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- Search Section -->
+    <section class="search py-5">
+      <div class="d-flex gap-3 align-items-center justify-content-center">
+        <div class="search-wrapper d-flex gap-1 align-items-center justify-content-center px-1 rounded-2">
+          <button type="button" class="border-0 bg-transparent p-0"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+              height="24" viewBox="0 0 12 12">
+              <path fill="#0d1b2a80"
+                d="M5 1a4 4 0 1 0 2.248 7.31l2.472 2.47a.75.75 0 1 0 1.06-1.06L8.31 7.248A4 4 0 0 0 5 1M2.5 5a2.5 2.5 0 1 1 5 0a2.5 2.5 0 0 1-5 0" />
+            </svg></button>
+          <input type="text" class="search-input form-control border-0 bg-transparent" placeholder="Search candidate" id="search">
+        </div>
+        <select class="form-select">
+          <option selected>All Agencies</option>
+          <option value="1">Agency 1</option>
+          <option value="2">Agency 2</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Pipeline Columns -->
+    <section class="pipeline-cards d-flex justify-content-between pb-5">
+      <div class="container">
+
+        <div class="pipeline-columns d-flex justify-content-center gap-4 overflow-x-auto">
+
+          <!-- Submitted Column -->
+          <div class="pipeline-column card border-0 bg-transparent shadow-none">
+            <div class="column-header d-flex justify-content-between align-items-center mb-2">
+              <div class="status d-flex gap-2 align-items-center">
+                <div class="status-dot status-submitted rounded-circle"></div>
+                <h2 class="fs-5 fw-medium">Submitted</h2>
+              </div>
+              <span class="fs-5 fw-medium">2</span>
+            </div>
+
+            <div class="candidate-cards card p-3">
+              <!-- Candidate Card -->
+              <div class="candidate-card card border-0 shadow p-3 d-flex flex-column gap-3 mb-3">
+                <div class="candidate-header d-flex justify-content-between align-items-center">
+                  <div class="candidate d-flex gap-2 align-items-center">
+                    <div class="candidate-avatar rounded-circle">
+                      <img src="./assets/images/candidate-pipeline/Sarah Mitchell.webp" alt="" class="rounded-circle">
+                    </div>
+                    <div class="candidate-info">
+                      <h3 class="fs-6 fw-medium">Sarah Mitchell</h3>
+                      <p class="candidate-years fw-medium fs__11 text-muted">7 years experience</p>
+                    </div>
+                  </div>
+
+                  <div class="rating d-flex gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#FFC370" stroke="#FFC370" stroke-width="2"
+                        d="M10.307 7.22c.642-1.6.963-2.401 1.485-2.512a1 1 0 0 1 .416 0c.521.11.843.911 1.485 2.512c.365.91.547 1.365.889 1.675q.145.13.31.23c.395.239.888.283 1.874.371c1.669.15 2.503.224 2.758.7a1 1 0 0 1 .106.316c.085.533-.529 1.09-1.756 2.207l-.34.31c-.574.522-.86.783-1.026 1.108a2 2 0 0 0-.198.623c-.052.361.032.74.2 1.497l.06.27c.301 1.358.452 2.037.264 2.37a1 1 0 0 1-.824.508c-.382.019-.921-.42-2-1.299c-.71-.579-1.065-.868-1.459-.981a2 2 0 0 0-1.102 0c-.394.113-.75.402-1.46.981c-1.078.878-1.617 1.318-2 1.3a1 1 0 0 1-.823-.509c-.188-.333-.037-1.012.264-2.37l.06-.27c.168-.757.252-1.136.2-1.497a2 2 0 0 0-.198-.623c-.166-.325-.452-.586-1.026-1.108l-.34-.31c-1.227-1.116-1.84-1.674-1.756-2.207a1 1 0 0 1 .106-.316c.255-.476 1.09-.55 2.758-.7c.986-.088 1.479-.132 1.873-.37a2 2 0 0 0 .31-.231c.343-.31.525-.765.89-1.675Z" />
+                    </svg>
+                    <span class="fs-6 fw-medium">4.5</span>
+                  </div>
+                </div>
+
+                <div class="skill-tags d-flex gap-2">
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">React</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">TypeScript</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">Node.js</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">+1</span>
+                </div>
+                <div class="card-meta d-flex gap-1 align-items-center">
+                  <img src="./assets/images/candidate-pipeline/building.svg" alt="">
+                  <p class="text_muted fs__11 fw-medium">TechRecruit Pro</p>
+                </div>
+                <hr class="text_muted m-0" />
+                <div class="text_muted fs__11 d-flex justify-content-between align-items-center">
+                  <span class="fw-medium d-flex gap-1 align-items-center"><img
+                      src="./assets/images/candidate-pipeline/Calender.svg" alt=""> 10/12/2025</span>
+                  <div class="comments d-flex gap-3">
+                    <span class="fw-medium d-flex gap-1 align-items-center"><img
+                        src="./assets/images/candidate-pipeline/link.svg" alt="">2</span>
+                    <span class="fw-medium d-flex gap-1 align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#8C8C8C" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1"
+                          d="M19 4H5a2 2 0 0 0-2 2v15l3.467-2.6a2 2 0 0 1 1.2-.4H19a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                      </svg>1</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Candidate Card 2 -->
+              <div class="candidate-card card border-0 shadow p-3 d-flex flex-column gap-3 mb-3">
+                <div class="candidate-header d-flex justify-content-between align-items-center">
+                  <div class="candidate d-flex gap-2 align-items-center">
+                    <div class="candidate-avatar rounded-circle">
+                      <img src="./assets/images/candidate-pipeline/Sarah Mitchell.webp" alt="" class="rounded-circle">
+                    </div>
+                    <div class="candidate-info">
+                      <h3 class="fs-6 fw-medium">Sarah Mitchell</h3>
+                      <p class="candidate-years fw-medium fs__11 text-muted">7 years experience</p>
+                    </div>
+                  </div>
+
+                  <div class="rating d-flex gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#FFC370" stroke="#FFC370" stroke-width="2"
+                        d="M10.307 7.22c.642-1.6.963-2.401 1.485-2.512a1 1 0 0 1 .416 0c.521.11.843.911 1.485 2.512c.365.91.547 1.365.889 1.675q.145.13.31.23c.395.239.888.283 1.874.371c1.669.15 2.503.224 2.758.7a1 1 0 0 1 .106.316c.085.533-.529 1.09-1.756 2.207l-.34.31c-.574.522-.86.783-1.026 1.108a2 2 0 0 0-.198.623c-.052.361.032.74.2 1.497l.06.27c.301 1.358.452 2.037.264 2.37a1 1 0 0 1-.824.508c-.382.019-.921-.42-2-1.299c-.71-.579-1.065-.868-1.459-.981a2 2 0 0 0-1.102 0c-.394.113-.75.402-1.46.981c-1.078.878-1.617 1.318-2 1.3a1 1 0 0 1-.823-.509c-.188-.333-.037-1.012.264-2.37l.06-.27c.168-.757.252-1.136.2-1.497a2 2 0 0 0-.198-.623c-.166-.325-.452-.586-1.026-1.108l-.34-.31c-1.227-1.116-1.84-1.674-1.756-2.207a1 1 0 0 1 .106-.316c.255-.476 1.09-.55 2.758-.7c.986-.088 1.479-.132 1.873-.37a2 2 0 0 0 .31-.231c.343-.31.525-.765.89-1.675Z" />
+                    </svg>
+                    <span class="fs-6 fw-medium">4.5</span>
+                  </div>
+                </div>
+
+                <div class="skill-tags d-flex gap-2">
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">React</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">TypeScript</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">Node.js</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">+1</span>
+                </div>
+                <div class="card-meta d-flex gap-1 align-items-center">
+                  <img src="./assets/images/candidate-pipeline/building.svg" alt="">
+                  <p class="text_muted fs__11 fw-medium">TechRecruit Pro</p>
+                </div>
+                <hr class="text_muted m-0" />
+                <div class="text_muted fs__11 d-flex justify-content-between align-items-center">
+                  <span class="fw-medium d-flex gap-1 align-items-center"><img
+                      src="./assets/images/candidate-pipeline/Calender.svg" alt=""> 10/12/2025</span>
+                  <div class="comments d-flex gap-3">
+                    <span class="fw-medium d-flex gap-1 align-items-center"><img
+                        src="./assets/images/candidate-pipeline/link.svg" alt="">2</span>
+                    <span class="fw-medium d-flex gap-1 align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#8C8C8C" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1"
+                          d="M19 4H5a2 2 0 0 0-2 2v15l3.467-2.6a2 2 0 0 1 1.2-.4H19a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                      </svg>1</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Under Review Column -->
+          <div class="pipeline-column card border-0 bg-transparent shadow-none">
+            <div class="column-header d-flex justify-content-between align-items-center mb-2">
+              <div class="status d-flex gap-2 align-items-center">
+                <div class="status-dot status-Under-Review rounded-circle"></div>
+                <h2 class="fs-5 fw-medium">Under Review</h2>
+              </div>
+              <span class="fs-5 fw-medium">2</span>
+            </div>
+
+            <div class="candidate-cards card p-3">
+              <!-- Candidate Card -->
+              <div class="candidate-card card border-0 shadow p-3 d-flex flex-column gap-3 mb-3">
+                <div class="candidate-header d-flex justify-content-between align-items-center">
+                  <div class="candidate d-flex gap-2 align-items-center">
+                    <div class="candidate-avatar rounded-circle">
+                      <img src="./assets/images/candidate-pipeline/Sarah Mitchell.webp" alt="" class="rounded-circle">
+                    </div>
+                    <div class="candidate-info">
+                      <h3 class="fs-6 fw-medium">Sarah Mitchell</h3>
+                      <p class="candidate-years fw-medium fs__11 text-muted">7 years experience</p>
+                    </div>
+                  </div>
+
+                  <div class="rating d-flex gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#FFC370" stroke="#FFC370" stroke-width="2"
+                        d="M10.307 7.22c.642-1.6.963-2.401 1.485-2.512a1 1 0 0 1 .416 0c.521.11.843.911 1.485 2.512c.365.91.547 1.365.889 1.675q.145.13.31.23c.395.239.888.283 1.874.371c1.669.15 2.503.224 2.758.7a1 1 0 0 1 .106.316c.085.533-.529 1.09-1.756 2.207l-.34.31c-.574.522-.86.783-1.026 1.108a2 2 0 0 0-.198.623c-.052.361.032.74.2 1.497l.06.27c.301 1.358.452 2.037.264 2.37a1 1 0 0 1-.824.508c-.382.019-.921-.42-2-1.299c-.71-.579-1.065-.868-1.459-.981a2 2 0 0 0-1.102 0c-.394.113-.75.402-1.46.981c-1.078.878-1.617 1.318-2 1.3a1 1 0 0 1-.823-.509c-.188-.333-.037-1.012.264-2.37l.06-.27c.168-.757.252-1.136.2-1.497a2 2 0 0 0-.198-.623c-.166-.325-.452-.586-1.026-1.108l-.34-.31c-1.227-1.116-1.84-1.674-1.756-2.207a1 1 0 0 1 .106-.316c.255-.476 1.09-.55 2.758-.7c.986-.088 1.479-.132 1.873-.37a2 2 0 0 0 .31-.231c.343-.31.525-.765.89-1.675Z" />
+                    </svg>
+                    <span class="fs-6 fw-medium">4.5</span>
+                  </div>
+                </div>
+
+                <div class="skill-tags d-flex gap-2">
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">React</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">TypeScript</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">Node.js</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">+1</span>
+                </div>
+                <div class="card-meta d-flex gap-1 align-items-center">
+                  <img src="./assets/images/candidate-pipeline/building.svg" alt="">
+                  <p class="text_muted fs__11 fw-medium">TechRecruit Pro</p>
+                </div>
+                <hr class="text_muted m-0" />
+                <div class="text_muted fs__11 d-flex justify-content-between align-items-center">
+                  <span class="fw-medium d-flex gap-1 align-items-center"><img
+                      src="./assets/images/candidate-pipeline/Calender.svg" alt=""> 10/12/2025</span>
+                  <div class="comments d-flex gap-3">
+                    <span class="fw-medium d-flex gap-1 align-items-center"><img
+                        src="./assets/images/candidate-pipeline/link.svg" alt="">2</span>
+                    <span class="fw-medium d-flex gap-1 align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#8C8C8C" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1"
+                          d="M19 4H5a2 2 0 0 0-2 2v15l3.467-2.6a2 2 0 0 1 1.2-.4H19a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                      </svg>1</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Candidate Card 2 -->
+              <div class="candidate-card card border-0 shadow p-3 d-flex flex-column gap-3 mb-3">
+                <div class="candidate-header d-flex justify-content-between align-items-center">
+                  <div class="candidate d-flex gap-2 align-items-center">
+                    <div class="candidate-avatar rounded-circle">
+                      <img src="./assets/images/candidate-pipeline/Sarah Mitchell.webp" alt="" class="rounded-circle">
+                    </div>
+                    <div class="candidate-info">
+                      <h3 class="fs-6 fw-medium">Sarah Mitchell</h3>
+                      <p class="candidate-years fw-medium fs__11 text-muted">7 years experience</p>
+                    </div>
+                  </div>
+
+                  <div class="rating d-flex gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#FFC370" stroke="#FFC370" stroke-width="2"
+                        d="M10.307 7.22c.642-1.6.963-2.401 1.485-2.512a1 1 0 0 1 .416 0c.521.11.843.911 1.485 2.512c.365.91.547 1.365.889 1.675q.145.13.31.23c.395.239.888.283 1.874.371c1.669.15 2.503.224 2.758.7a1 1 0 0 1 .106.316c.085.533-.529 1.09-1.756 2.207l-.34.31c-.574.522-.86.783-1.026 1.108a2 2 0 0 0-.198.623c-.052.361.032.74.2 1.497l.06.27c.301 1.358.452 2.037.264 2.37a1 1 0 0 1-.824.508c-.382.019-.921-.42-2-1.299c-.71-.579-1.065-.868-1.459-.981a2 2 0 0 0-1.102 0c-.394.113-.75.402-1.46.981c-1.078.878-1.617 1.318-2 1.3a1 1 0 0 1-.823-.509c-.188-.333-.037-1.012.264-2.37l.06-.27c.168-.757.252-1.136.2-1.497a2 2 0 0 0-.198-.623c-.166-.325-.452-.586-1.026-1.108l-.34-.31c-1.227-1.116-1.84-1.674-1.756-2.207a1 1 0 0 1 .106-.316c.255-.476 1.09-.55 2.758-.7c.986-.088 1.479-.132 1.873-.37a2 2 0 0 0 .31-.231c.343-.31.525-.765.89-1.675Z" />
+                    </svg>
+                    <span class="fs-6 fw-medium">4.5</span>
+                  </div>
+                </div>
+
+                <div class="skill-tags d-flex gap-2">
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">React</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">TypeScript</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">Node.js</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">+1</span>
+                </div>
+                <div class="card-meta d-flex gap-1 align-items-center">
+                  <img src="./assets/images/candidate-pipeline/building.svg" alt="">
+                  <p class="text_muted fs__11 fw-medium">TechRecruit Pro</p>
+                </div>
+                <hr class="text_muted m-0" />
+                <div class="text_muted fs__11 d-flex justify-content-between align-items-center">
+                  <span class="fw-medium d-flex gap-1 align-items-center"><img
+                      src="./assets/images/candidate-pipeline/Calender.svg" alt=""> 10/12/2025</span>
+                  <div class="comments d-flex gap-3">
+                    <span class="fw-medium d-flex gap-1 align-items-center"><img
+                        src="./assets/images/candidate-pipeline/link.svg" alt="">2</span>
+                    <span class="fw-medium d-flex gap-1 align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#8C8C8C" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1"
+                          d="M19 4H5a2 2 0 0 0-2 2v15l3.467-2.6a2 2 0 0 1 1.2-.4H19a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                      </svg>1</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Interview Column -->
+          <div class="pipeline-column card border-0 bg-transparent shadow-none">
+            <div class="column-header d-flex justify-content-between align-items-center mb-2">
+              <div class="status d-flex gap-2 align-items-center">
+                <div class="status-dot status-Interview rounded-circle"></div>
+                <h2 class="fs-5 fw-medium">Interview</h2>
+              </div>
+              <span class="fs-5 fw-medium">2</span>
+            </div>
+
+            <div class="candidate-cards card p-3">
+              <!-- Candidate Card -->
+              <div class="candidate-card card border-0 shadow p-3 d-flex flex-column gap-3 mb-3">
+                <div class="candidate-header d-flex justify-content-between align-items-center">
+                  <div class="candidate d-flex gap-2 align-items-center">
+                    <div class="candidate-avatar rounded-circle">
+                      <img src="./assets/images/candidate-pipeline/Sarah Mitchell.webp" alt="" class="rounded-circle">
+                    </div>
+                    <div class="candidate-info">
+                      <h3 class="fs-6 fw-medium">Sarah Mitchell</h3>
+                      <p class="candidate-years fw-medium fs__11 text-muted">7 years experience</p>
+                    </div>
+                  </div>
+
+                  <div class="rating d-flex gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#FFC370" stroke="#FFC370" stroke-width="2"
+                        d="M10.307 7.22c.642-1.6.963-2.401 1.485-2.512a1 1 0 0 1 .416 0c.521.11.843.911 1.485 2.512c.365.91.547 1.365.889 1.675q.145.13.31.23c.395.239.888.283 1.874.371c1.669.15 2.503.224 2.758.7a1 1 0 0 1 .106.316c.085.533-.529 1.09-1.756 2.207l-.34.31c-.574.522-.86.783-1.026 1.108a2 2 0 0 0-.198.623c-.052.361.032.74.2 1.497l.06.27c.301 1.358.452 2.037.264 2.37a1 1 0 0 1-.824.508c-.382.019-.921-.42-2-1.299c-.71-.579-1.065-.868-1.459-.981a2 2 0 0 0-1.102 0c-.394.113-.75.402-1.46.981c-1.078.878-1.617 1.318-2 1.3a1 1 0 0 1-.823-.509c-.188-.333-.037-1.012.264-2.37l.06-.27c.168-.757.252-1.136.2-1.497a2 2 0 0 0-.198-.623c-.166-.325-.452-.586-1.026-1.108l-.34-.31c-1.227-1.116-1.84-1.674-1.756-2.207a1 1 0 0 1 .106-.316c.255-.476 1.09-.55 2.758-.7c.986-.088 1.479-.132 1.873-.37a2 2 0 0 0 .31-.231c.343-.31.525-.765.89-1.675Z" />
+                    </svg>
+                    <span class="fs-6 fw-medium">4.5</span>
+                  </div>
+                </div>
+
+                <div class="skill-tags d-flex gap-2">
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">React</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">TypeScript</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">Node.js</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">+1</span>
+                </div>
+                <div class="card-meta d-flex gap-1 align-items-center">
+                  <img src="./assets/images/candidate-pipeline/building.svg" alt="">
+                  <p class="text_muted fs__11 fw-medium">TechRecruit Pro</p>
+                </div>
+                <hr class="text_muted m-0" />
+                <div class="text_muted fs__11 d-flex justify-content-between align-items-center">
+                  <span class="fw-medium d-flex gap-1 align-items-center"><img
+                      src="./assets/images/candidate-pipeline/Calender.svg" alt=""> 10/12/2025</span>
+                  <div class="comments d-flex gap-3">
+                    <span class="fw-medium d-flex gap-1 align-items-center"><img
+                        src="./assets/images/candidate-pipeline/link.svg" alt="">2</span>
+                    <span class="fw-medium d-flex gap-1 align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#8C8C8C" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1"
+                          d="M19 4H5a2 2 0 0 0-2 2v15l3.467-2.6a2 2 0 0 1 1.2-.4H19a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                      </svg>1</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Candidate Card 2 -->
+              <div class="candidate-card card border-0 shadow p-3 d-flex flex-column gap-3 mb-3">
+                <div class="candidate-header d-flex justify-content-between align-items-center">
+                  <div class="candidate d-flex gap-2 align-items-center">
+                    <div class="candidate-avatar rounded-circle">
+                      <img src="./assets/images/candidate-pipeline/Sarah Mitchell.webp" alt="" class="rounded-circle">
+                    </div>
+                    <div class="candidate-info">
+                      <h3 class="fs-6 fw-medium">Sarah Mitchell</h3>
+                      <p class="candidate-years fw-medium fs__11 text-muted">7 years experience</p>
+                    </div>
+                  </div>
+
+                  <div class="rating d-flex gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#FFC370" stroke="#FFC370" stroke-width="2"
+                        d="M10.307 7.22c.642-1.6.963-2.401 1.485-2.512a1 1 0 0 1 .416 0c.521.11.843.911 1.485 2.512c.365.91.547 1.365.889 1.675q.145.13.31.23c.395.239.888.283 1.874.371c1.669.15 2.503.224 2.758.7a1 1 0 0 1 .106.316c.085.533-.529 1.09-1.756 2.207l-.34.31c-.574.522-.86.783-1.026 1.108a2 2 0 0 0-.198.623c-.052.361.032.74.2 1.497l.06.27c.301 1.358.452 2.037.264 2.37a1 1 0 0 1-.824.508c-.382.019-.921-.42-2-1.299c-.71-.579-1.065-.868-1.459-.981a2 2 0 0 0-1.102 0c-.394.113-.75.402-1.46.981c-1.078.878-1.617 1.318-2 1.3a1 1 0 0 1-.823-.509c-.188-.333-.037-1.012.264-2.37l.06-.27c.168-.757.252-1.136.2-1.497a2 2 0 0 0-.198-.623c-.166-.325-.452-.586-1.026-1.108l-.34-.31c-1.227-1.116-1.84-1.674-1.756-2.207a1 1 0 0 1 .106-.316c.255-.476 1.09-.55 2.758-.7c.986-.088 1.479-.132 1.873-.37a2 2 0 0 0 .31-.231c.343-.31.525-.765.89-1.675Z" />
+                    </svg>
+                    <span class="fs-6 fw-medium">4.5</span>
+                  </div>
+                </div>
+
+                <div class="skill-tags d-flex gap-2">
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">React</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">TypeScript</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">Node.js</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">+1</span>
+                </div>
+                <div class="card-meta d-flex gap-1 align-items-center">
+                  <img src="./assets/images/candidate-pipeline/building.svg" alt="">
+                  <p class="text_muted fs__11 fw-medium">TechRecruit Pro</p>
+                </div>
+                <hr class="text_muted m-0" />
+                <div class="text_muted fs__11 d-flex justify-content-between align-items-center">
+                  <span class="fw-medium d-flex gap-1 align-items-center"><img
+                      src="./assets/images/candidate-pipeline/Calender.svg" alt=""> 10/12/2025</span>
+                  <div class="comments d-flex gap-3">
+                    <span class="fw-medium d-flex gap-1 align-items-center"><img
+                        src="./assets/images/candidate-pipeline/link.svg" alt="">2</span>
+                    <span class="fw-medium d-flex gap-1 align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#8C8C8C" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1"
+                          d="M19 4H5a2 2 0 0 0-2 2v15l3.467-2.6a2 2 0 0 1 1.2-.4H19a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                      </svg>1</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Offer Column -->
+          <div class="pipeline-column card border-0 bg-transparent shadow-none">
+            <div class="column-header d-flex justify-content-between align-items-center mb-2">
+              <div class="status d-flex gap-2 align-items-center">
+                <div class="status-dot status-Offer rounded-circle"></div>
+                <h2 class="fs-5 fw-medium">Offer</h2>
+              </div>
+              <span class="fs-5 fw-medium">2</span>
+            </div>
+
+            <div class="candidate-cards card p-3">
+              <!-- Candidate Card -->
+              <div class="candidate-card card border-0 shadow p-3 d-flex flex-column gap-3 mb-3">
+                <div class="candidate-header d-flex justify-content-between align-items-center">
+                  <div class="candidate d-flex gap-2 align-items-center">
+                    <div class="candidate-avatar rounded-circle">
+                      <img src="./assets/images/candidate-pipeline/Sarah Mitchell.webp" alt="" class="rounded-circle">
+                    </div>
+                    <div class="candidate-info">
+                      <h3 class="fs-6 fw-medium">Sarah Mitchell</h3>
+                      <p class="candidate-years fw-medium fs__11 text-muted">7 years experience</p>
+                    </div>
+                  </div>
+
+                  <div class="rating d-flex gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#FFC370" stroke="#FFC370" stroke-width="2"
+                        d="M10.307 7.22c.642-1.6.963-2.401 1.485-2.512a1 1 0 0 1 .416 0c.521.11.843.911 1.485 2.512c.365.91.547 1.365.889 1.675q.145.13.31.23c.395.239.888.283 1.874.371c1.669.15 2.503.224 2.758.7a1 1 0 0 1 .106.316c.085.533-.529 1.09-1.756 2.207l-.34.31c-.574.522-.86.783-1.026 1.108a2 2 0 0 0-.198.623c-.052.361.032.74.2 1.497l.06.27c.301 1.358.452 2.037.264 2.37a1 1 0 0 1-.824.508c-.382.019-.921-.42-2-1.299c-.71-.579-1.065-.868-1.459-.981a2 2 0 0 0-1.102 0c-.394.113-.75.402-1.46.981c-1.078.878-1.617 1.318-2 1.3a1 1 0 0 1-.823-.509c-.188-.333-.037-1.012.264-2.37l.06-.27c.168-.757.252-1.136.2-1.497a2 2 0 0 0-.198-.623c-.166-.325-.452-.586-1.026-1.108l-.34-.31c-1.227-1.116-1.84-1.674-1.756-2.207a1 1 0 0 1 .106-.316c.255-.476 1.09-.55 2.758-.7c.986-.088 1.479-.132 1.873-.37a2 2 0 0 0 .31-.231c.343-.31.525-.765.89-1.675Z" />
+                    </svg>
+                    <span class="fs-6 fw-medium">4.5</span>
+                  </div>
+                </div>
+
+                <div class="skill-tags d-flex gap-2">
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">React</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">TypeScript</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">Node.js</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">+1</span>
+                </div>
+                <div class="card-meta d-flex gap-1 align-items-center">
+                  <img src="./assets/images/candidate-pipeline/building.svg" alt="">
+                  <p class="text_muted fs__11 fw-medium">TechRecruit Pro</p>
+                </div>
+                <hr class="text_muted m-0" />
+                <div class="text_muted fs__11 d-flex justify-content-between align-items-center">
+                  <span class="fw-medium d-flex gap-1 align-items-center"><img
+                      src="./assets/images/candidate-pipeline/Calender.svg" alt=""> 10/12/2025</span>
+                  <div class="comments d-flex gap-3">
+                    <span class="fw-medium d-flex gap-1 align-items-center"><img
+                        src="./assets/images/candidate-pipeline/link.svg" alt="">2</span>
+                    <span class="fw-medium d-flex gap-1 align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#8C8C8C" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1"
+                          d="M19 4H5a2 2 0 0 0-2 2v15l3.467-2.6a2 2 0 0 1 1.2-.4H19a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                      </svg>1</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Candidate Card 2 -->
+              <div class="candidate-card card border-0 shadow p-3 d-flex flex-column gap-3 mb-3">
+                <div class="candidate-header d-flex justify-content-between align-items-center">
+                  <div class="candidate d-flex gap-2 align-items-center">
+                    <div class="candidate-avatar rounded-circle">
+                      <img src="./assets/images/candidate-pipeline/Sarah Mitchell.webp" alt="" class="rounded-circle">
+                    </div>
+                    <div class="candidate-info">
+                      <h3 class="fs-6 fw-medium">Sarah Mitchell</h3>
+                      <p class="candidate-years fw-medium fs__11 text-muted">7 years experience</p>
+                    </div>
+                  </div>
+
+                  <div class="rating d-flex gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                      <path fill="#FFC370" stroke="#FFC370" stroke-width="2"
+                        d="M10.307 7.22c.642-1.6.963-2.401 1.485-2.512a1 1 0 0 1 .416 0c.521.11.843.911 1.485 2.512c.365.91.547 1.365.889 1.675q.145.13.31.23c.395.239.888.283 1.874.371c1.669.15 2.503.224 2.758.7a1 1 0 0 1 .106.316c.085.533-.529 1.09-1.756 2.207l-.34.31c-.574.522-.86.783-1.026 1.108a2 2 0 0 0-.198.623c-.052.361.032.74.2 1.497l.06.27c.301 1.358.452 2.037.264 2.37a1 1 0 0 1-.824.508c-.382.019-.921-.42-2-1.299c-.71-.579-1.065-.868-1.459-.981a2 2 0 0 0-1.102 0c-.394.113-.75.402-1.46.981c-1.078.878-1.617 1.318-2 1.3a1 1 0 0 1-.823-.509c-.188-.333-.037-1.012.264-2.37l.06-.27c.168-.757.252-1.136.2-1.497a2 2 0 0 0-.198-.623c-.166-.325-.452-.586-1.026-1.108l-.34-.31c-1.227-1.116-1.84-1.674-1.756-2.207a1 1 0 0 1 .106-.316c.255-.476 1.09-.55 2.758-.7c.986-.088 1.479-.132 1.873-.37a2 2 0 0 0 .31-.231c.343-.31.525-.765.89-1.675Z" />
+                    </svg>
+                    <span class="fs-6 fw-medium">4.5</span>
+                  </div>
+                </div>
+
+                <div class="skill-tags d-flex gap-2">
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">React</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">TypeScript</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">Node.js</span>
+                  <span class="skill-tag rounded-3 p-1 fw-medium fs__11">+1</span>
+                </div>
+                <div class="card-meta d-flex gap-1 align-items-center">
+                  <img src="./assets/images/candidate-pipeline/building.svg" alt="">
+                  <p class="text_muted fs__11 fw-medium">TechRecruit Pro</p>
+                </div>
+                <hr class="text_muted m-0" />
+                <div class="text_muted fs__11 d-flex justify-content-between align-items-center">
+                  <span class="fw-medium d-flex gap-1 align-items-center"><img
+                      src="./assets/images/candidate-pipeline/Calender.svg" alt=""> 10/12/2025</span>
+                  <div class="comments d-flex gap-3">
+                    <span class="fw-medium d-flex gap-1 align-items-center"><img
+                        src="./assets/images/candidate-pipeline/link.svg" alt="">2</span>
+                    <span class="fw-medium d-flex gap-1 align-items-center"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="none" stroke="#8C8C8C" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1"
+                          d="M19 4H5a2 2 0 0 0-2 2v15l3.467-2.6a2 2 0 0 1 1.2-.4H19a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                      </svg>1</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Bootstrap 5.3 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+:root {
+  --maincolor: #0d1b2a;
+  --mainfont: "Roboto", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--mainfont);
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+label {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  padding: 16px 24px;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(21, 45, 70, 0.565);
+}
+.btn:active {
+  transform: translateY(0);
+}
+.bg__main-color {
+  background-color: var(--maincolor);
+}
+.text__rich-black {
+  color: var(--maincolor);
+}
+.btn__rich-black {
+  background-color: var(--maincolor);
+  color: #fff;
+  padding: 6px 12px;
+}
+.btn__rich-black:focus {
+  background-color: #304e71;
+  color: #fff;
+}
+.btn__rich-black:hover {
+  background-color: #304e71;
+  color: #fff;
+}
+.btn__rich-black__outline {
+  border-color: var(--maincolor);
+  color: var(--maincolor);
+  padding: 6px 12px;
+}
+.btn__rich-black__outline:focus {
+  background-color: #304e71;
+  color: #fff;
+}
+.btn__rich-black__outline:hover {
+  background-color: #304e71;
+  color: #fff;
+}
+.fs__11 {
+  font-size: 11px;
+}
+.text_muted{
+  color: #8C8C8C;
+}

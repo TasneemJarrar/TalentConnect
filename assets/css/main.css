@@ -1,35 +1,3 @@
-:root {
-  --maincolor: #0d1b2a;
-  --mainfont: "Roboto", sans-serif;
-}
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--mainfont);
-}
-.bg__main-color {
-  background-color: var(--maincolor);
-}
-a {
-  text-decoration: none;
-}
-.text__rich-black {
-  color: var(--maincolor);
-}
-.btn__rich-black {
-  background-color: var(--maincolor);
-  color: #fff;
-  padding: 6px 12px;
-}
-.btn__rich-black:focus {
-  background-color: #304e71;
-  color: #fff;
-}
-.btn__rich-black:hover {
-  background-color: #304e71;
-  color: #fff;
-}
 /* navbar start */
 .navbar {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
