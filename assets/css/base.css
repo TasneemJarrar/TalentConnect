@@ -65,8 +65,17 @@ a {
   background-color: #304e71;
   color: #fff;
 }
+.btn__rich-black__outline:focus svg path {
+  stroke: #fff;
+}
+.btn__rich-black__outline:hover svg path{
+  stroke: #fff;
+}
 .fs__11 {
   font-size: 11px;
+}
+.fs__12 {
+  font-size: 12px;
 }
 .text_muted{
   color: #8C8C8C;

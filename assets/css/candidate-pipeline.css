@@ -1,25 +1,25 @@
 /* header start */
-.header .back-btn{
+.header .back-btn {
   transition: all ease 0.3s;
 }
-.header .back-btn:hover{
+.header .back-btn:hover {
   transform: scale(1.05);
   color: #676666;
 }
-.header .back-btn svg path{
+.header .back-btn svg path {
   transition: all ease 0.3s;
 }
-.header .back-btn:hover svg path{
+.header .back-btn:hover svg path {
   stroke: #676666;
 }
-.header .btn-team svg path{
+.header .btn-team svg path {
   transition: all ease 0.3s;
 }
-.header .btn-team:hover svg path{
+.header .btn-team:hover svg path {
   fill: #fff;
 }
-.search .search-wrapper{
-  background-color: #EEEEEE;
+.search .search-wrapper {
+  background-color: #eeeeee;
   width: 200px;
 }
 .search .search-wrapper .form-control::placeholder {
@@ -30,45 +30,101 @@
   border-color: none;
   box-shadow: none;
 }
-.search .form-select{
+.search .form-select {
   width: 200px;
   color: var(--maincolor);
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 .search .form-select:focus {
   border-color: transparent;
   box-shadow: none;
 }
-.pipeline-columns{
+.pipeline-columns {
   scrollbar-width: thin;
 }
 .pipeline-columns .pipeline-column {
-  min-width: 400px; 
+  min-width: 400px;
   flex-shrink: 0;
   margin-bottom: 10px;
 }
-.pipeline-cards .pipeline-column .status-dot{
+.pipeline-cards .pipeline-column .status-dot {
   width: 13px;
   height: 13px;
 }
-.pipeline-cards .pipeline-column .status-submitted{
-  background-color: #2669E9;
+.pipeline-cards .pipeline-column .status-submitted {
+  background-color: #2669e9;
 }
-.pipeline-cards .pipeline-column .status-Under-Review{
-  background-color: #E97B26;
+.pipeline-cards .pipeline-column .status-Under-Review {
+  background-color: #e97b26;
 }
-.pipeline-cards .pipeline-column .status-Interview{
-  background-color: #9217BF;
+.pipeline-cards .pipeline-column .status-Interview {
+  background-color: #9217bf;
 }
-.pipeline-cards .pipeline-column .status-Offer{
-  background-color: #06A646;
+.pipeline-cards .pipeline-column .status-Offer {
+  background-color: #06a646;
 }
-.pipeline-cards .pipeline-column .candidate-card .skill-tag{
-  background-color: #DCD9D7;
+.pipeline-cards .pipeline-column .candidate-cards .skill-tag {
+  background-color: #dcd9d7;
 }
-.pipeline-cards .pipeline-column .candidate-cards{
+.pipeline-cards .pipeline-column .candidate-cards {
   height: 500px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 10px;
-  border: 1px dashed #8C8C8C;
+  border: 1px dashed #8c8c8c;
+}
+.pipeline-cards .pipeline-column .candidate-cards .candidate-btn:hover {
+  box-shadow: none;
+}
+.pipeline-cards
+  .pipeline-column
+  .candidate-cards
+  .offcanvas
+  .offcanvas-title
+  .candidate_profile-img {
+  width: 40px;
+  height: 40px;
+  background-color: #2c2c2c;
+}
+.pipeline-cards
+  .pipeline-column
+  .candidate-cards
+  .offcanvas
+  .offcanvas-title
+  .candidate_header-text
+  p {
+  color: #757575;
+}
+.pipeline-cards .pipeline-column .candidate-cards .offcanvas .attachment-item {
+  background-color: #dcd9d7;
+}
+.pipeline-cards
+  .pipeline-column
+  .candidate-cards
+  .offcanvas
+  .download-btn:hover {
+  transform: translateY(0) scale(1.1);
+  font-weight: 600;
+  box-shadow: none;
+}
+.pipeline-cards .pipeline-column .candidate-cards .offcanvas .add-comment {
+  background-color: #dcd9d7;
+}
+.pipeline-cards
+  .pipeline-column
+  .candidate-cards
+  .offcanvas
+  .add-comment::placeholder {
+  color: #0d1b2a80;
+  font-size: 12px;
+}
+.pipeline-cards .pipeline-column .candidate-cards .offcanvas .comment{
+  background-color: #dcd9d7;
+}
+.pipeline-cards .pipeline-column .candidate-cards .offcanvas .comment-header .comment-user-img{
+  width: 30px;
+  height: 30px;
+  background-color: #2c2c2c;
+}
+.pipeline-cards .pipeline-column .candidate-cards .offcanvas .offcanvas-body {
+  scrollbar-width: thin;
 }
